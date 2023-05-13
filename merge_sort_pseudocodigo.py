@@ -1,5 +1,3 @@
-from math import floor
-
 def merge(arr, inicio_esq, meio, fim_dir, arr_aux):
   apontador_esq = inicio_esq
   apontador_dir = meio
@@ -19,7 +17,7 @@ def merge(arr, inicio_esq, meio, fim_dir, arr_aux):
 def merge_sort(arr, inicio_esq, fim_dir, arr_aux):
   if (fim_dir - inicio_esq) < 2:
     return 0
-  meio = floor((inicio_esq + fim_dir) / 2)
+  meio = int((inicio_esq + fim_dir) / 2)
   merge_sort(arr, inicio_esq, meio, arr_aux)
   merge_sort(arr, meio, fim_dir, arr_aux)
   merge(arr, inicio_esq, meio, fim_dir, arr_aux)
